@@ -141,7 +141,7 @@ export default function Home() {
       {/* Hero */}
       <section id="home" className="relative">
         <div className="mx-auto max-w-6xl px-4 py-24 md:py-32">
-          <p className="text-sm uppercase tracking-widest text-muted dark:text-white/60">Hi, I'm</p>
+          <p className="text-sm uppercase tracking-widest text-muted dark:text-white/60">Hi, I&apos;m</p>
           <h1 className="mt-2 text-4xl md:text-6xl font-bold leading-tight text-hero dark:text-white heading-glow">
             Pankaj Kumar
           </h1>
@@ -195,7 +195,7 @@ export default function Home() {
           Hi, I am Pankaj Kumar, a Full‑stack Developer passionate about creating and delivering projects that make a real‑world impact. I specialize in full‑stack development with Next.js and Express.js, using TypeScript for type safety.
         </p>
         <p className="mt-4 text-hero dark:text-white">
-          Have an idea, want to collaborate, or have an internship opportunity? Feel free to message me! I'm always excited to connect and work on great projects.
+          Have an idea, want to collaborate, or have an internship opportunity? Feel free to message me! I&apos;m always excited to connect and work on great projects.
         </p>
       </motion.section>
 
