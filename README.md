@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Pankaj Kumar — Portfolio (Next.js)
 
-## Getting Started
+Built with Next.js 15, React 19, Tailwind CSS v4, Framer Motion, and next-themes. Authored with help from GPT‑5.
 
-First, run the development server:
+This is a modern, responsive developer portfolio showcasing About, Experience, Skills, Projects, and Contact sections with smooth in‑view animations and a polished light/dark theme toggle.
+
+### Features
+- **Modern UI**: Tailwind CSS v4, sensible defaults, and clean layout.
+- **Animated theme toggle**: Smooth light/dark transition overlay using Framer Motion + next-themes.
+- **Section reveals**: Subtle motion when sections enter the viewport.
+- **Responsive**: Mobile‑first design across all sections.
+- **Easy customization**: Edit a few files to change content and styling.
+
+### Tech stack
+- **Framework**: Next.js 15 (App Router)
+- **UI**: React 19, Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Theming**: next-themes (class strategy)
+
+### Getting started
+Prerequisites:
+- Node.js 20+ (recommended)
+- npm 10+ (this repo uses `package-lock.json`)
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the production server:
 
-## Learn More
+```bash
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Project structure
+```
+src/
+  app/
+    globals.css       # Theme tokens, utilities, effects
+    layout.tsx        # Metadata, fonts, ThemeProvider
+    page.tsx          # All sections (Hero, About, Experience, Skills, Projects, Contact)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Customize content
+- **Name, headline, social links, resume**: Update the Hero section and links in `src/app/page.tsx`.
+- **About, Experience, Skills, Projects**: Edit copy and arrays in `src/app/page.tsx`.
+- **SEO metadata / title**: Update `metadata` in `src/app/layout.tsx`.
+- **Theme colors**: Tweak CSS custom properties in `src/app/globals.css`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For example, update site metadata in `src/app/layout.tsx`:
 
-## Deploy on Vercel
+```startLine:endLine:src/app/layout.tsx
+16: export const metadata: Metadata = {
+17:   title: "Pankaj Kumar — Full‑stack Developer",
+18:   description:
+19:     "Portfolio of Pankaj Kumar, a full‑stack developer specializing in Next.js, Express.js, and TypeScript.",
+20: };
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+And adjust theme tokens in `src/app/globals.css`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```startLine:endLine:src/app/globals.css
+4: :root {
+5:   --bg: 255 255 255;
+6:   --fg: 15 23 42;
+7:   --muted: 71 85 105;
+8:   --accent: 37 99 235;
+9:   --accent-contrast: 255 255 255;
+10: }
+```
+
+### Available scripts
+- **dev**: `next dev --turbopack`
+- **build**: `next build`
+- **start**: `next start`
+- **lint**: `next lint`
+
+### Deployment
+- **Vercel (recommended)**: Import the repo in Vercel, set framework to Next.js. No extra config needed.
+- **Self‑host**:
+  - Build: `npm run build`
+  - Start: `npm start` (ensure a compatible Node.js runtime is available)
+
+### Notes
+- Uses the App Router and React Server Components by default.
+- The theme toggle uses a page overlay for smooth transitions; you can adjust duration/easing in `src/app/page.tsx`.
+
+### Credits
+- Designed and built by Pankaj Kumar.
+- Generated and refined with the assistance of GPT‑5.
+
+
